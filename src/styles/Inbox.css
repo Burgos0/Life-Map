@@ -1,0 +1,167 @@
+.inbox-container {
+  position: relative;
+}
+
+.inbox-toggle {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: 1px solid #333;
+  border-radius: 6px;
+  color: #e0e0e0;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 18px;
+}
+
+.inbox-toggle:hover {
+  background-color: #333;
+  border-color: #444;
+}
+
+.inbox-badge {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background-color: #ff4757;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.inbox-panel {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 8px;
+  width: 300px;
+  background-color: #2a2a2a;
+  border: 1px solid #444;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  max-height: 400px;
+  overflow: hidden;
+}
+
+.inbox-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  border-bottom: 1px solid #333;
+  flex-shrink: 0;
+}
+
+.inbox-header h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+}
+
+.inbox-input-section {
+  display: flex;
+  gap: 8px;
+  padding: 12px;
+  border-bottom: 1px solid #333;
+  flex-shrink: 0;
+}
+
+.inbox-input {
+  flex: 1;
+  padding: 6px 10px;
+  background-color: #1a1a1a;
+  border: 1px solid #444;
+  border-radius: 4px;
+  color: #e0e0e0;
+  font-size: 13px;
+}
+
+.inbox-input:focus {
+  outline: none;
+  border-color: #4a9eff;
+}
+
+.inbox-input::placeholder {
+  color: #666;
+}
+
+.inbox-items {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.inbox-empty {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  font-size: 13px;
+  padding: 16px;
+  text-align: center;
+}
+
+.inbox-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px;
+  border-bottom: 1px solid #333;
+  transition: all 0.2s ease;
+}
+
+.inbox-item:last-child {
+  border-bottom: none;
+}
+
+.inbox-item:hover {
+  background-color: #333;
+}
+
+.item-text {
+  flex: 1;
+  font-size: 13px;
+  color: #e0e0e0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.item-actions {
+  display: flex;
+  gap: 6px;
+  flex-shrink: 0;
+  margin-left: 8px;
+}
+
+@media (max-width: 768px) {
+  .inbox-panel {
+    width: 280px;
+    max-height: 350px;
+  }
+
+  .inbox-input-section {
+    flex-direction: column;
+  }
+
+  .inbox-input-section .btn {
+    width: 100%;
+  }
+}

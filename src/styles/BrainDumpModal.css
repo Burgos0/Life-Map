@@ -1,0 +1,154 @@
+.brain-dump-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 12px;
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  max-width: 900px;
+  width: 90%;
+  max-height: 85vh;
+  overflow: hidden;
+}
+
+.brain-dump-modal .modal-header {
+  padding: 24px;
+  border-bottom: 1px solid #333;
+  flex-shrink: 0;
+}
+
+.brain-dump-modal .modal-header h2 {
+  margin: 0 0 8px 0;
+  font-size: 20px;
+  color: #fff;
+}
+
+.modal-subtitle {
+  margin: 0;
+  font-size: 13px;
+  color: #999;
+}
+
+.brain-dump-content {
+  display: flex;
+  gap: 20px;
+  flex: 1;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.brain-dump-input-section,
+.brain-dump-preview-section {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+.brain-dump-input-section label,
+.brain-dump-preview-section label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #aaa;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 8px;
+}
+
+.brain-dump-textarea {
+  flex: 1;
+  padding: 12px;
+  background-color: #0d0d0d;
+  border: 1px solid #333;
+  border-radius: 6px;
+  color: #e0e0e0;
+  font-family: 'Monaco', 'Courier New', monospace;
+  font-size: 13px;
+  line-height: 1.5;
+  resize: none;
+  outline: none;
+}
+
+.brain-dump-textarea:focus {
+  border-color: #4a9eff;
+  box-shadow: 0 0 0 2px rgba(74, 158, 255, 0.1);
+}
+
+.brain-dump-textarea::placeholder {
+  color: #555;
+}
+
+.brain-dump-preview {
+  flex: 1;
+  padding: 12px;
+  background-color: #0d0d0d;
+  border: 1px solid #333;
+  border-radius: 6px;
+  color: #c0c0c0;
+  font-family: 'Monaco', 'Courier New', monospace;
+  font-size: 12px;
+  line-height: 1.6;
+  overflow-y: auto;
+}
+
+.brain-dump-preview pre {
+  margin: 0;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.preview-empty {
+  color: #666;
+  margin: 0;
+  font-style: italic;
+}
+
+.brain-dump-modal .modal-footer {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  padding: 16px 24px;
+  border-top: 1px solid #333;
+  flex-shrink: 0;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 900px) {
+  .brain-dump-modal {
+    max-width: 95vw;
+    max-height: 90vh;
+  }
+
+  .brain-dump-content {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .brain-dump-input-section,
+  .brain-dump-preview-section {
+    min-height: 250px;
+  }
+}
+
+@media (max-width: 600px) {
+  .brain-dump-modal {
+    border-radius: 8px;
+  }
+
+  .brain-dump-modal .modal-header {
+    padding: 16px;
+  }
+
+  .brain-dump-content {
+    padding: 12px;
+  }
+
+  .brain-dump-modal .modal-footer {
+    padding: 12px 16px;
+  }
+}
